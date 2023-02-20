@@ -1,0 +1,27 @@
+{
+  "guild_not_found": {
+    "ru": "сервер не найден",
+    "en": "guild not found",
+    "uk": "сервер не знайдено"
+  },
+  "permissions_not_found": {
+    "ru": "недостаточно прав для использования этой команды",
+    "en": "not enough permissions to use this command",
+    "uk": "недостатньо прав для використання цієї команди"
+  },
+  "command_error": {
+    "ru": "произошла ошибка при использовании slash команды",
+    "en": "an error occurred while using the slash command",
+    "uk": "сталася помилка при використанні slash команди"
+  },
+  "help_command_not_found": {
+    "ru": "данная команда не найдена",
+    "en": "this command not found",
+    "uk": "дана команда не знайдена"
+  },
+  "interaction_error": {
+    "ru": "данная команда не найдена",
+    "en": "this command not found",
+    "uk": "дана команда не знайдена"
+  }
+}

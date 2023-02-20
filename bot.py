@@ -12,8 +12,9 @@ bot = commands.Bot(
 cogs = [
     "events",
     "info",
-    "administration.time_out",
-    "administration.clear"
+    "help",
+    "control",
+    "interactions"
 ]
 
 for cog in cogs:

@@ -18,9 +18,16 @@ class Info(commands.Cog):
 #info user
     @info.sub_command(
         name="user",
-        description="выводит информацию о пользователе"
+        description=disnake.Localised(
+            data={
+                disnake.Locale.ru: "выводит информацию о пользователе",
+                disnake.Locale.en_US: "shows information about the user",
+                disnake.Locale.en_GB: "shows information about the user",
+                disnake.Locale.uk: "виводить інформацію про Користувача"
+            }
+        )
     )
-    async def info_user(
+    async def info_user (
             self,
             inter: disnake.AppCommandInteraction,
             user: disnake.Member = commands.Param(
@@ -90,7 +97,14 @@ class Info(commands.Cog):
 #info guild
     @info.sub_command(
         name="guild",
-        description = "выводит информацию о сервере"
+        description=disnake.Localised(
+            data={
+                disnake.Locale.ru: "выводит информацию о сервере",
+                disnake.Locale.en_US: "shows information about the guild",
+                disnake.Locale.en_GB: "shows information about the guild",
+                disnake.Locale.uk: "виводить інформацію про сервер"
+            }
+        )
     )
     async def info_guild(
             self,
@@ -212,7 +226,14 @@ class Info(commands.Cog):
 #info bot
     @info.sub_command(
         name="bot",
-        description="выводит информацию о боте"
+        description=disnake.Localised(
+            data={
+                disnake.Locale.ru: "выводит информацию о боте",
+                disnake.Locale.en_US: "shows information about the bot",
+                disnake.Locale.en_GB: "shows information about the bot",
+                disnake.Locale.uk: "виводить інформацію про боте"
+            }
+        )
     )
     async def info_bot(
             self,

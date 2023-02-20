@@ -1,10 +1,11 @@
 import json
 
 import disnake
-from disnake.ext import commands
+from disnake.enums import Locale
 from rich.console import Console
 from datetime import datetime, timedelta
 import re
+import os
 
 console = Console()
 
@@ -61,3 +62,31 @@ def to_date(time: str):
         if re.search(r"[0-9]+d\b", string=string):
             dtn += timedelta(days=int(string.replace("d", ""))) #D
     return dtn
+
+def error(inter: disnake.ApplicationCommandInteraction, name: str):
+    load = json.load(open("src/error.json", "r", encoding="utf-8"))
+    def local():
+        if inter.locale == Locale.ru:
+            return load[name]["ru"]
+        elif inter.locale == Locale.en_US:
+            return load[name]["en"]
+        elif inter.locale == Locale.en_GB:
+            return load[name]["en"]
+        elif inter.locale == Locale.uk:
+            return load[name]["uk"]
+        else:
+            return load[name]["en"]
+
+    embed = disnake.Embed(
+        color=disnake.Color.red(),
+        description=local()
+    )
+    embed.set_author(
+        name="ERROR:"
+    )
+    return inter.send(embed=embed, ephemeral=True)
+
+class BotColor:
+    embed_bg = 0x2F3136
+
+BotColor = BotColor()

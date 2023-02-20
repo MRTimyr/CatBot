@@ -1,0 +1,54 @@
+{
+    "commands": {
+        "help": {
+            "name": "help",
+            "usage": {
+                "name": "/help [command]",
+                "arguments": [
+                    "`command` - название команды"
+                ]
+            },
+            "description": {
+                "ru": "выводит информация о команде",
+                "en": "shows information about commands",
+                "uk": "виводить інформація про команду"
+            }
+        },
+        "info user": {
+            "name": "info user",
+            "usage": {
+                "name": "/info user [user]",
+                "arguments": [
+                    "`user` - участник сервера"
+                ]
+            },
+            "description": {
+                "ru": "выводит информацию о пользователе",
+                "en": "shows information about the user",
+                "uk": "виводить інформацію про Користувача"
+            }
+        },
+        "info guild": {
+            "name": "info guild",
+            "usage": {
+                "name": "/info guild"
+            },
+            "description": {
+                "ru": "выводит информацию о сервере",
+                "en": "shows information about the guild",
+                "uk": "виводить інформацію про сервер"
+            }
+        },
+        "info bot": {
+            "name": "info bot",
+            "usage": {
+                "name": "/info bot"
+            },
+            "description": {
+                "ru": "выводит информацию о боте",
+                "en": "shows information about the bot",
+                "uk": "виводить інформацію про боте"
+            }
+        }
+    }
+}
